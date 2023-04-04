@@ -1,0 +1,28 @@
+.button {
+  border: 0;
+  border-radius: 0.25rem;
+  box-shadow: 0 0.125rem 0 0.125rem rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  font-size: var(--fs-300);
+  letter-spacing: 0.04rem;
+  line-height: 1;
+  text-transform: uppercase;
+  font-weight: var(--font-extrabold);
+}
+
+.button:hover,
+.button:focus {
+  box-shadow: 0.125rem 0.125rem rgba(0, 0, 0, 0.5);
+  transform: scale(1.05) translateY(-0.125rem);
+}
+
+.button-read-more {
+  margin-top: 1.5625rem;
+  padding: 0.9375rem;
+}
+
+.button-submit {
+  padding: 0.9375rem 1.875rem;
+}

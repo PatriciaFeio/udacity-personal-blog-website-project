@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans:wght@400;500;700;800;900&family=Roboto+Flex:wght@300;400&display=swap");
+
+:root {
+  /* color */
+  --clr-neutral-100: #fff;
+  --clr-neutral-200: #e6e6e6;
+  --clr-neutral-300: #262626;
+  --clr-posts-100: #04af31;
+  --clr-posts-200: #02641c;
+  --clr-about-100: #e6006f;
+  --clr-about-200: #99004a;
+  --clr-contact-100: #ff751a;
+  --clr-contact-200: #cc5200;
+  --clr-shape-gr-100: #82fc82;
+  --clr-shape-gr-200: #50fb50;
+  --clr-shape-gr-300: #05e105;
+  --clr-shape-yl-100: #ffc680;
+  --clr-shape-yl-200: #ffaf4d;
+  --clr-shape-yl-300: #ff981a;
+  --clr-shape-pk-100: #ffe6f9;
+  --clr-shape-pk-200: #ffb3ec;
+  --clr-shape-pk-300: #ff99e6;
+
+  /* typography */
+  --fs-200: 0.75rem;
+  --fs-300: 1rem;
+  --fs-400: 1.125rem; /* 18px */
+  --fs-500: 1.5rem; /* 24px */
+  --fs-600: 2.25rem; /* 36px */
+  --fs-700: 2.625rem; /* 42px */
+  --fs-800: 3rem; /* 48px */
+
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-extrabold: 800;
+  --font-black: 900;
+}
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app-wrapper {
+  font: var(--fs-400) "Roboto Flex", sans-serif;
+  color: var(--clr-neutral-300);
+  line-height: 1.4;
+}
+
+.app-list {
+  list-style: none;
+}
+
+.app-link {
+  text-decoration: none;
+}
+
+.button {
+  color: var(--clr-neutral-300);
+}
+
+.nav-link-posts,
+.nav-link-about,
+.nav-link-contact {
+  font-family: "Encode Sans", sans-serif;
+  text-transform: uppercase;
+  font-weight: var(--font-black);
+}
+
+.hero-title {
+  font: var(--font-extrabold) clamp(var(--fs-600), 5.9vw, var(--fs-700))
+      "Encode Sans",
+    sans-serif;
+  color: var(--clr-neutral-100);
+}
+
+.section-title {
+  font: var(--font-black) var(--fs-600) "Encode Sans", sans-serif;
+  text-transform: uppercase;
+}
+
+.card-title {
+  font: var(--font-black) var(--fs-500) "Encode Sans", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.subtitle {
+  font: var(--font-medium) var(--fs-500) "Encode Sans", sans-serif;
+}
+
+.subtitle-light {
+  color: var(--clr-neutral-100);
+}
+
+.subtitle-dark {
+  color: var(--clr-neutral-300);
+}
+
+.nav-link-posts,
+.title-posts {
+  color: var(--clr-posts-200);
+}
+
+.nav-link-about,
+.title-about {
+  color: var(--clr-about-200);
+}
+
+.nav-link-contact,
+.title-contact {
+  color: var(--clr-contact-200);
+}
+
+.blogpost-link {
+  color: var(--clr-posts-100);
+}
+
+.blogpost-link:hover {
+  color: var(--clr-about-100);
+}
+
+.p-figcaption {
+  text-align: center;
+  font-style: italic;
+  font-size: var(--fs-200);
+}
+
+.p-figcaption-color {
+  color: var(--clr-neutral-300);
+}
+
+.p-quote {
+  font-style: italic;
+}
+
+.p-special:after {
+  content: "👩‍💻";
+  font-size: var(--fs-500);
+}
+
+.p-top {
+  text-transform: uppercase;
+  font-weight: var(--font-extrabold);
+}
+
+.link-top {
+  color: var(--clr-neutral-300);
+}
+
+.form-input,
+.form-textarea {
+  font-size: var(--fs-400);
+  font-weight: var(--font-extrabold);
+  line-height: 2;
+}
+
+/* Footer */
+
+.link-twitter {
+  color: #1da1f2;
+}
+
+.link-linkedin {
+  color: #0072b1;
+}
+
+.link-github {
+  color: #171515;
+}
+
+.link-twitter:hover,
+.link-linkedin:hover,
+.link-github:hover {
+  color: var(--clr-contact-200);
+}
+
+.social-list-item {
+  line-height: 1.5;
+}
+
+.foot-wrapper {
+  background-color: var(--clr-neutral-200);
+}
+
+.app-footer {
+  width: 100%;
+  max-width: 85%;
+  margin: 0 auto;
+  padding: 2rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (min-width: 56em) {
+  .app-footer {
+    max-width: 60%;
+  }
+}

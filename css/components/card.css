@@ -1,0 +1,19 @@
+.post-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1.875rem;
+  background-color: #fff;
+  border: 0.125rem solid rgba(0, 0, 0);
+  border-radius: 0.25rem;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 1.5625rem;
+}

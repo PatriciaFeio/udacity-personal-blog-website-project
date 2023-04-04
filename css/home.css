@@ -1,0 +1,247 @@
+@import url(base/base.css);
+@import url(components/card.css);
+@import url(components/button.css);
+@import url(components/form.css);
+
+.app-wrapper {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Header */
+
+.app-header,
+.nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.app-header {
+  width: min(100%, 85%);
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.logo-img {
+  width: 60%;
+  padding-bottom: 0.25rem;
+}
+
+.primary-nav {
+  width: 100%;
+}
+
+.nav-link-posts:after {
+  content: "";
+  display: block;
+  width: 0;
+  border-bottom: 0.25rem solid var(--clr-posts-100);
+  transition: 0.7s;
+}
+
+.nav-link-about:after {
+  content: "";
+  display: block;
+  width: 0;
+  border-bottom: 0.25rem solid var(--clr-about-100);
+  transition: 0.7s;
+}
+
+.nav-link-contact:after {
+  content: "";
+  display: block;
+  width: 0;
+  border-bottom: 0.25rem solid var(--clr-contact-100);
+  transition: 0.7s;
+}
+
+.nav-link-posts:hover:after {
+  content: "";
+  display: block;
+  width: 0;
+  color: var(--clr-posts-100);
+  transition: 0.7s;
+}
+
+.nav-link-about:hover:after {
+  content: "";
+  display: block;
+  width: 0;
+  color: var(--clr-about-100);
+  transition: 0.7s;
+}
+
+.nav-link-contact:hover:after {
+  content: "";
+  display: block;
+  width: 0;
+  color: var(--clr-contact-100);
+  transition: 0.7s;
+}
+
+.nav-link-posts:hover:after,
+.nav-link-about:hover:after,
+.nav-link-contact:hover:after {
+  width: 100%;
+}
+
+/* Header media queries */
+
+@media (min-width: 37.5em) {
+  .primary-nav {
+    width: 50%;
+  }
+}
+
+@media (min-width: 56em) {
+  .app-header {
+    padding: 2rem 0;
+    max-width: 60%;
+  }
+}
+
+@media (min-width: 64em) {
+  .primary-nav {
+    width: 30%;
+  }
+}
+
+/* Content */
+
+.hero-section {
+  background-image: url("/images/home/hero-img-medium.jpg");
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-title-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.p-figcaption {
+  padding: 0.625rem 0;
+}
+
+.p-max-width {
+  max-width: 75ch;
+}
+
+.section-posts,
+.section-about,
+.section-contact {
+  width: min(100%, 85%);
+}
+
+.section-posts,
+.section-about {
+  margin: 5.25rem auto 0 auto;
+}
+
+.section-contact {
+  margin: 5.25rem auto 15.875rem auto;
+}
+
+.section-about,
+.section-contact,
+.section-posts {
+  position: relative;
+}
+
+.circle-1 {
+  position: absolute;
+  left: -150px;
+  top: -50px;
+  z-index: -1;
+  width: 450px;
+  height: 450px;
+  background-color: var(--clr-shape-yl-300);
+  border-radius: 50%;
+}
+
+.circle-2 {
+  position: absolute;
+  right: 0px;
+  top: 500px;
+  z-index: -1;
+  width: 600px;
+  height: 600px;
+  background-color: var(--clr-shape-yl-200);
+  border-radius: 50%;
+}
+
+.circle-3 {
+  position: absolute;
+  left: 300px;
+  bottom: -80px;
+  z-index: -1;
+  width: 400px;
+  height: 400px;
+  background-color: var(--clr-shape-gr-100);
+  border-radius: 50%;
+}
+
+.circle-4 {
+  position: absolute;
+  left: -70px;
+  top: 460px;
+  z-index: -2;
+  width: 450px;
+  height: 450px;
+  background-color: var(--clr-shape-gr-300);
+  border-radius: 50%;
+}
+
+.circle-5 {
+  position: absolute;
+  left: -70px;
+  bottom: -100px;
+  z-index: -1;
+  width: 500px;
+  height: 500px;
+  background-color: var(--clr-shape-pk-200);
+  border-radius: 50%;
+}
+
+.posts-title-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.section-title {
+  margin-bottom: 1.5625rem;
+}
+
+.posts-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(20rem, 100%), 1fr));
+  grid-gap: 1.5625rem;
+  position: relative;
+}
+
+/* Back to top */
+
+.p-top {
+  position: absolute;
+  bottom: -214px;
+  right: 0;
+}
+
+/* Content and footer media queries */
+
+@media (min-width: 56em) {
+  .section-posts,
+  .section-about,
+  .section-contact {
+    max-width: 60%;
+  }
+}

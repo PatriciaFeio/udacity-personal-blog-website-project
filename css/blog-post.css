@@ -1,0 +1,142 @@
+@import url(base/base.css);
+@import url(components/button.css);
+@import url(components/form.css);
+
+.app-wrapper {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+p {
+  max-width: 75ch;
+}
+
+/* Header */
+
+.app-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: min(100%, 85%);
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.logo-img {
+  width: 60%;
+  padding-bottom: 0.25rem;
+}
+
+/* Header media queries */
+
+@media (min-width: 56em) {
+  .app-header {
+    padding: 2rem 0;
+    max-width: 75%;
+  }
+}
+
+/* Content */
+
+.app-main {
+  width: min(100%, 85%);
+  margin: 0 auto 200px auto;
+  position: relative;
+}
+
+.hero-section {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+.blogpost-hero-title-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 1.5625rem;
+}
+
+.hero-img,
+.article-section-img {
+  width: 100%;
+}
+
+.blog-author {
+  display: grid;
+  grid-template-columns: 2.5rem 1fr;
+  gap: 0.5rem;
+  align-items: center;
+  margin-block-end: 2.1875rem;
+}
+
+.author-avatar {
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.article-section-img-small {
+  width: 100%;
+  max-width: 300px;
+}
+
+.img-margin-top {
+  margin-top: 1.5625rem;
+}
+
+.img-margin-bottom {
+  margin-bottom: 1.5625rem;
+}
+
+.blog-list {
+  list-style-position: inside;
+}
+
+.article-section,
+.article-subsection {
+  margin-bottom: 3.125rem;
+}
+
+.blog-section-title,
+.blog-section-subtitle {
+  margin-bottom: 1.5625rem;
+}
+
+.blog-section-title {
+  font: var(--font-black) clamp(var(--fs-500), 5.9vw, var(--fs-600))
+      "Encode Sans",
+    sans-serif;
+  text-transform: uppercase;
+}
+
+.pre-code {
+  background-color: var(--clr-neutral-200);
+  overflow: auto;
+  font-weight: var(--font-regular);
+  font-size: var(--fs-300);
+  line-height: 1.75;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 0.25rem;
+  text-align: left;
+}
+
+.p-top {
+  position: absolute;
+  bottom: -150px;
+  right: 0;
+}
+
+/* Content media queries */
+
+@media (min-width: 64em) {
+  .app-main {
+    width: min(100%, 50%);
+  }
+}

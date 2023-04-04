@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog | Patricia Feio</title>
+    <meta
+      name="description"
+      content="My name is Patricia and I developed this blog as part of my Front End Developer Nanodegree program at Udacity."
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#603cba" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="stylesheet" href="/css/blog-post.css" />
+  </head>
+  <body id="app" class="app-wrapper">
+    <header class="app-header">
+      <a class="app-link" href="home.html">
+        <img
+          class="logo-img"
+          src="/images/logoWhite.svg"
+          alt="Patricia blog logo"
+        />
+      </a>
+    </header>
+    <main class="app-main">
+      <article>
+        <div>
+          <div class="hero-section">
+            <div class="blogpost-hero-title-wrapper">
+              <h1 class="blogpost-hero-title">
+                How I solved: Interactive rating component challenge
+              </h1>
+              <h3 class="subtitle subtitle-dark">
+                A Frontend Mentor challenge for user interaction and update the
+                DOM.
+              </h3>
+            </div>
+            <img class="hero-img" src="images/blog-post/hero-img.jpg" alt="" />
+          </div>
+          <div class="blog-author">
+            <a href="home.html#about" target="_blank">
+              <img class="author-avatar" src="images/blog-post/pfeio.jpg" alt="Patricia avatar">
+            </a>
+            <div>
+              <p>Patrícia Feio on</p>
+              <time datetime>April 04, 2023
+            </div>
+
+          </div>
+        </div>
+
+        <div>
+          <div class="article-section">
+            <h2 class="blog-section-title">Quick summary</h2>
+            <p>
+              The aim of this article is to provide one solution to the Frontend
+              Mentor interactive rating component challenge.
+            </p>
+            <br>
+            <p>
+              Frontend Mentor is a platform that provides frontend projects to
+              anyone who wants to practise and improve their skills. The
+              interactive rating component challenge is a good way to exercise
+              handling user interaction and updating the DOM.
+            </p>
+            <br>
+            <p>P.S. I am not affiliated with Frontend Mentor.</p>
+          </div>
+
+          <div class="article-section">
+            <h2 class="blog-section-title">Requirements</h2>
+            <p>Technologies: HTML, CSS, JS</p>
+            <br>
+            <p>
+              Tools: text editor (I use VS Code), Sketch/Figma (I use Figma),
+              Github
+            </p>
+          </div>
+
+          <div class="article-section">
+            <h2 class="blog-section-title">Introduction</h2>
+            <p>With the interactive rating component, the user can:</p>
+            <br>
+            <ul class="blog-list">
+              <li>Select and submit a number rating (from 1 to 5)</li>
+              <li>
+                See a "thank you" card state after submitting a rating (with a
+                message showing the selected rating)
+              </li>
+              <li>
+                View the optimal layout for the component depending on their
+                device's screen size (the project has to be responsive)
+              </li>
+              <li>
+                See hover states for all interactive elements on the page
+                (ratings and submit button)
+              </li>
+            </ul>
+          </div>
+
+          <div class="article-section">
+            <h2 class="blog-section-title">Multiple step explanation</h2>
+
+            <div class="article-subsection">
+              <h4 class="blog-section-subtitle">Getting started</h4>
+              <ol class="blog-list">
+                <li>Download the starter code</li>
+                <li>
+                  Set up the project with version control (you can use Git
+                  directly with VS Code)
+                </li>
+                <li>
+                  Create a GitHub repository. As you'll have to add a repository
+                  URL when submitting a solution, you might as well create a
+                  repository at the beginning of the project; also it's always a
+                  good practice to have a GitHub repository for a project, even
+                  for a personal one, in case you need to show your projects 😊
+                </li>
+                <li>
+                  Check the design from the Sketch/Figma file (only for PRO
+                  subscriptions) or check the layouts from the JPEG design files,
+                  read the README file, and get styles from the style-guide file
+                </li>
+                <li>Now it's time to start building the project! 🚀</li>
+              </ol>
+            </div>
+
+            <div class="article-subsection">
+              <h4 class="blog-section-subtitle">Project images</h4>
+              <img
+                class="article-section-img img-margin-top"
+                src="images/blog-post/design-overview.jpg"
+                alt="design overview of the project"
+              />
+            </div>
+
+            <div class="article-subsection">
+              <h4 class="blog-section-subtitle">Folder structure</h4>
+              <img
+                class="article-section-img-small img-margin-top"
+                src="images/blog-post/folder-structure.jpg"
+                alt="folder structure used"
+              />
+            </div>
+
+            <div class="article-subsection">
+              <h4 class="blog-section-subtitle">HTML</h4>
+              <p>
+                Looking at the component's rating state design, we can structure
+                it in two larger sections represented by the &lt;header&gt; and
+                the &lt;main&gt; elements of the HTML.
+              </p>
+              <img
+                class="article-section-img img-margin-top img-margin-bottom"
+                src="images/blog-post/header_design-outline1.jpg"
+                alt="main sections of the project"
+              />
+              <br />
+              <p>This leads us to the basic structure of the project:</p>
+
+              <pre class="pre-code">
+                <code>
+                  &lt;!DOCTYPE html&gt;
+                  &lt;html lang=&quot;en&quot;&gt;
+                    &lt;head&gt;
+                      &lt;meta charset=&quot;UTF-8&quot; /&gt;
+                      &lt;meta
+                        name=&quot;viewport&quot;
+                        content=&quot;width=device-width, initial-scale=1.0&quot;
+                      /&gt;
+                      &lt;title&gt;Frontend Mentor | Interactive rating component&lt;/title&gt;
+                    &lt;/head&gt;
+
+                    &lt;body&gt;
+                      &lt;!-- Rating state starts --&gt;
+                      &lt;header&gt;&lt;/header&gt;
+                      &lt;main&gt;&lt;/main&gt;
+                      &lt;!-- Rating state ends --&gt;
+                    &lt;/body&gt;
+                  &lt;/html&gt;
+                </code>
+              </pre>
+            
+              <p>We'll then add all the other elements and the provided content.</p>
+              <br />
+              <p>
+                Inside the &lt;header&gt; element there's an &lt;img&gt; tag (the
+                icon star) and an &lt;h1&gt; tag (the top-level heading of the
+                component):
+              </p>
+
+              <img
+                class="article-section-img img-margin-top img-margin-bottom"
+                src="images/blog-post/header_design-outline.jpg"
+                alt="header element of the project"
+              />
+
+              <p>
+                Inside the &lt;main&gt; element there's a &lt;p&gt; tag (the
+                paragraph) and a &lt;form&gt; tag (containing the interactive
+                controls where the user can choose and submit ratings):
+              </p>
+
+              <img
+                class="article-section-img img-margin-top img-margin-bottom"
+                src="images/blog-post/main_design-outline.jpg"
+                alt="main element of the project"
+              />
+
+              <p>
+                In the &lt;form&gt; element we have a &lt;fieldset&gt; element that
+                groups five &lt;input&gt; (type="radio") + &lt;label&gt; group tags
+                (enclosed by &lt;div&gt;s), and a &lt;button&gt; (type="submit")
+                tag:
+              </p>
+
+              <img
+                class="article-section-img img-margin-top img-margin-bottom"
+                src="images/blog-post/form__design-outline.jpg"
+                alt="form element of the project"
+              />
+
+              <p>Translated to code:</p>
+
+              <pre class="pre-code">
+                <code>
+                  &lt;body&gt;
+
+                  &lt;!-- Rating state start --&gt;
+                  &lt;header&gt;
+                    &lt;img src=&quot;images/icon-star.svg&quot; alt=&quot;&quot; class=&quot;header-img margin-bottom&quot;&gt;
+                      &lt;h1&gt;How did we do?&lt;/h1&gt;
+                  &lt;/header&gt;
+                
+                  &lt;main&gt;
+                    &lt;p class=&quot;margin-top margin-bottom&quot;&gt;Please let us know how we did with your 
+                      support request. All feedback is appreciated to help us improve our offering!&lt;/p&gt;
+                    &lt;form&gt;
+                      &lt;fieldset&gt;
+                        &lt;div&gt;
+                          &lt;input type=&quot;radio&quot; name=&quot;ratings&quot; value=&quot;1&quot; id=&quot;rating-1&quot;&gt;
+                          &lt;label for=&quot;rating-1&quot; class=&quot;flex&quot;&gt;1&lt;/label&gt;
+                        &lt;/div&gt;
+                        &lt;div&gt;
+                          &lt;input type=&quot;radio&quot; name=&quot;ratings&quot; value=&quot;2&quot; id=&quot;rating-2&quot;&gt;
+                          &lt;label for=&quot;rating-2&quot; class=&quot;flex&quot;&gt;2&lt;/label&gt;
+                        &lt;/div&gt;
+                        &lt;div&gt;
+                          &lt;input type=&quot;radio&quot; name=&quot;ratings&quot; value=&quot;3&quot; id=&quot;rating-3&quot;&gt;
+                          &lt;label for=&quot;rating-3&quot; class=&quot;flex&quot;&gt;3&lt;/label&gt;
+                        &lt;/div&gt;
+                        &lt;div&gt;
+                          &lt;input type=&quot;radio&quot; name=&quot;ratings&quot; value=&quot;4&quot; id=&quot;rating-4&quot;&gt;
+                          &lt;label for=&quot;rating-4&quot; class=&quot;flex&quot;&gt;4&lt;/label&gt;
+                        &lt;/div&gt;
+                        &lt;div&gt;
+                          &lt;input type=&quot;radio&quot; name=&quot;ratings&quot; value=&quot;5&quot; id=&quot;rating-5&quot;&gt;
+                          &lt;label for=&quot;rating-5&quot; class=&quot;flex&quot;&gt;5&lt;/label&gt;
+                        &lt;/div&gt;
+                      &lt;/fieldset&gt;
+                      &lt;button type=&quot;submit&quot; id=&quot;form-submit-btn&quot; class=&quot;margin-top&quot;&gt;Submit&lt;/button
+                    &lt;/form&gt;
+                  &lt;/main&gt;
+                  &lt;!-- Rating state ends --&gt;
+                &lt;/body&gt;
+                </code>
+              </pre>
+
+              <p>As you can see, &lt;div&gt; tags are also used. The &lt;div&gt; element is a non-semantic element.</p>
+              <br>
+              <p>Unlike semantic elements, <span class="p-quote">non-semantic elements don't convey any useful information about the structure of the document, and using them gets the code hard to read.</span></p>
+              <br>
+              <p>That's why, as a general rule of thumb, the &lt;div&gt; element should only be used for layout purposes.</p>
+              <br>
+              <p>Outside the &lt;main&gt; element, we have the modal.</p><p><span class="p-quote">A modal is a dialog box/popup window that is displayed on top of the current page</span></p>
+              <br>
+              <p>In the modal, we can see an &lt;img&gt; tag (for the "thank you" illustration provided), an &lt;h2&gt; tag (heading level 2) and two &lt;p&gt; tags.</p>
+
+              <pre class="pre-code">
+                <code>
+                  &lt;!-- Thank you state starts --&gt;
+                  &lt;div id=&quot;overlay&quot; class=&quot;flex&quot;&gt;
+                    &lt;div id=&quot;modal&quot;&gt;
+                      &lt;img src=&quot;images/illustration-thank-you.svg&quot; alt=&quot;&quot;&gt;
+                      &lt;h2 class=&quot;modal-heading order-3&quot;&gt;Thank you!&lt;/h2&gt;
+                      &lt;p id=&quot;modal-msg&quot; class=&quot;order-2&quot;&gt;&lt;/p&gt;
+                      &lt;p class=&quot;order-4&quot;&gt;We appreciate you taking the time to give a rating. If you ever 
+                      need more support, don&rsquo;t hesitate to get in touch!&lt;/p&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;!-- Thank you state ends --&gt;
+                </code>
+              </pre>
+
+              <p>We now have our component structured with HTML, let us proceed styling it with CSS. 🎨</p>
+            </div>
+
+            <p>If you are enjoying reading this post, please consider reading it all <a class="app-link blogpost-link" href="https://patriciafeio.hashnode.dev/how-i-solved-interactive-rating-component-challenge">here</a> (link is external).</p>
+            <br>
+
+            <form action method="post">
+              <legend>
+                You can also subscribe to get an email when i write new posts:
+              </legend>
+              <fieldset class="fieldset-bkg">
+                <ul class="app-list">
+                  <li>
+                    <input
+                      type="text"
+                      class="form-input"
+                      placeholder="Your name"
+                      required
+                    />
+                  </li>
+                  <li>
+                    <input
+                      type="email"
+                      class="form-input"
+                      placeholder="Your email address"
+                      required
+                    />
+                  </li>
+                </ul>
+                <button class="button button-submit">Subscribe</button>
+              </fieldset>
+            </form>
+
+      </article>
+      <p class="p-top">
+        <a class="app-link link-top" href="#app">Back to top</a>
+      </p>
+    </main>
+    <div class="foot-wrapper">
+      <footer class="app-footer">
+        <p>
+          © 2023-present <br>
+          Patrícia Feio
+        </p>
+        <ul class="app-list">
+          <li class="social-list-item">
+            <a class="app-link link-twitter" href="https://twitter.com/p_feyo">Twitter</a>
+          </li>
+          <li class="social-list-item">
+            <a class="app-link link-linkedin" href="#">LinkedIn</a>
+          </li>
+          <li class="social-list-item">
+            <a class="app-link link-github" href="https://github.com/PatriciaFeio">GitHub</a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+  </body>
+</html>
