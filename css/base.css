@@ -124,9 +124,12 @@
 }
 
 .p-figcaption {
-  text-align: center;
   font-style: italic;
   font-size: var(--fs-200);
+}
+
+.center {
+  text-align: center;
 }
 
 .p-figcaption-color {
@@ -149,6 +152,8 @@
 
 .link-top {
   color: var(--clr-neutral-300);
+  text-decoration: underline;
+  text-underline-offset: 0.25rem;
 }
 
 .form-input,
