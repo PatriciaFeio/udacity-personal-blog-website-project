@@ -113,7 +113,7 @@
 /* Content */
 
 .hero-section {
-  background-image: url(images/home/hero-img-medium.jpg);
+  background-image: url("/images/hero-img-medium.jpg");
   height: 250px;
   display: flex;
   justify-content: center;
