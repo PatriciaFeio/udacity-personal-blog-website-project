@@ -1,3 +1,5 @@
+@import url("base.css");
+
 .post-card {
   display: flex;
   flex-direction: column;
